@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/media.css">
+</head>
+
+<body>
+
+    <div id="app" class="vh-100 d-flex flex-column">
+        <header class="header">
+            <nav class="navbar navbar-expand-sm navbar-light bg-white">
+                <div class="container flex-wrap">
+                    <a class="navbar-brand order-md-2 " href="#">Urban Store</a>
+
+                    <div class="dropdown dropdown-lang mr-0 mr-sm-auto order-md-1">
+                        <a class="nav-link dropdown-toggle pl-0" href="#" id="dropdownId" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="./images/icons/ru.svg" alt="lang-ru-flag" class="mr-2">
+
+                            <span class="d-none d-sm-block">Русский</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">
+                                <img src="./images/icons/uz.svg" alt="lang-uz-flag" class="mr-2">
+
+                                O’zbek
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <img src="./images/icons/en.svg" alt="lang-ru-flag" class="mr-2">
+
+                                English
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <ul class="navbar-nav ml-0 ml-sm-auto nav-action order-md-3 flex-row">
+                        <li class="nav-item dropdown  search">
+                            <a class="nav-link bg-transparent" href="#" role="button" id="dropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.0156 18.2168L14.2555 13.2662C15.4794 11.8113 16.15 9.98069 16.15 8.07499C16.15 3.62251 12.5275 0 8.07499 0C3.62251 0 0 3.62251 0 8.07499C0 12.5275 3.62251 16.15 8.07499 16.15C9.74652 16.15 11.3394 15.6458 12.7013 14.6888L17.4975 19.677C17.6979 19.8852 17.9676 20 18.2565 20C18.53 20 18.7895 19.8957 18.9864 19.7061C19.4049 19.3034 19.4182 18.6357 19.0156 18.2168ZM8.07499 2.10652C11.3661 2.10652 14.0435 4.78391 14.0435 8.07499C14.0435 11.3661 11.3661 14.0435 8.07499 14.0435C4.78391 14.0435 2.10652 11.3661 2.10652 8.07499C2.10652 4.78391 4.78391 2.10652 8.07499 2.10652Z"
+                                        fill="#6D6E71" />
+                                </svg>
+
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-item">
+                                    <div class="input-group">
+                                        <input type="text" class="from-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21.6265 21.0265L21.5765 21.0264C21.5764 21.106 21.5599 21.1848 21.5278 21.2584C21.4958 21.332 21.4488 21.399 21.3895 21.4555C21.3302 21.512 21.2597 21.5569 21.1821 21.5874C21.1044 21.618 21.0211 21.6336 20.9369 21.6334H20.9368H3.06265H3.0626C2.97863 21.6334 2.8955 21.6177 2.81799 21.587C2.74048 21.5564 2.67019 21.5115 2.61108 21.455C2.55197 21.3986 2.5052 21.3316 2.47331 21.2581C2.44144 21.1846 2.42504 21.1059 2.425 21.0265C2.42656 19.8203 2.92835 18.6634 3.82102 17.81C4.71378 16.9565 5.92453 16.4762 7.18768 16.4753C7.38277 16.4753 7.57028 16.4012 7.70887 16.2686C7.84755 16.136 7.92589 15.9556 7.92589 15.767C7.92589 15.5784 7.84755 15.398 7.70887 15.2654C7.57027 15.1328 7.38274 15.0587 7.18765 15.0587H7.18759C5.53474 15.0606 3.94973 15.6894 2.78025 16.8078C1.61071 17.9264 0.952223 19.4434 0.95 21.0264L0.95 21.0265C0.950404 21.5637 1.17366 22.0783 1.56997 22.4575C1.96621 22.8366 2.50307 23.0495 3.0626 23.05H3.06265H20.9368C21.4965 23.0497 22.0335 22.8369 22.4299 22.4578C22.8264 22.0785 23.0497 21.5638 23.05 21.0265V21.0264C23.0476 19.4436 22.3892 17.9268 21.2199 16.8083C20.0507 15.6899 18.466 15.061 16.8133 15.0587H16.8132C16.6181 15.0587 16.4306 15.1328 16.292 15.2654C16.1533 15.398 16.075 15.5784 16.075 15.767C16.075 15.9556 16.1533 16.136 16.292 16.2686C16.4306 16.4012 16.6181 16.4753 16.8132 16.4753C18.0762 16.4768 19.2868 16.9571 20.1795 17.8105C21.0721 18.6638 21.5742 19.8204 21.5765 21.0266L21.6265 21.0265ZM21.6265 21.0265C21.6242 19.8064 21.1163 18.6369 20.214 17.7744C19.3118 16.9119 18.0888 16.4268 16.8132 16.4253H7.18765C5.91195 16.4262 4.68875 16.9112 3.78647 17.7738C2.8842 18.6365 2.37657 19.8063 2.375 21.0265C2.37504 21.1128 2.39286 21.1983 2.42744 21.278C2.46202 21.3577 2.51269 21.4302 2.57654 21.4912C2.6404 21.5522 2.7162 21.6005 2.79961 21.6335C2.88301 21.6665 2.97239 21.6834 3.06265 21.6834H20.9368C21.0272 21.6836 21.1167 21.6668 21.2004 21.634C21.284 21.6011 21.36 21.5527 21.424 21.4917C21.4881 21.4307 21.5389 21.3582 21.5737 21.2784C21.6084 21.1985 21.6264 21.113 21.6265 21.0265ZM7.53547 3.14054L7.53491 3.14123C6.36022 4.59878 5.73545 6.39394 5.76264 8.23474C5.76281 12.2415 8.55335 15.5188 12 15.5188C15.4477 15.5188 18.2368 12.2412 18.2368 8.23439C18.2368 4.22751 15.4447 0.95 12 0.95C10.3017 0.95 8.71571 1.7283 7.53547 3.14054ZM12 2.36664C14.6151 2.36664 16.7632 4.9873 16.7632 8.23439C16.7632 11.4815 14.6151 14.1022 12 14.1022C9.38488 14.1022 7.23764 11.4787 7.23676 8.23438C7.23587 4.99012 9.38309 2.36664 12 2.36664Z"
+                                        fill="#6D6E71" stroke="#6D6E71" stroke-width="0.1" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.4189 16.6485C16.9063 16.6485 15.6758 17.8791 15.6758 19.3916C15.6758 20.9042 16.9064 22.1348 18.4189 22.1348C19.9315 22.1348 21.1621 20.9042 21.1621 19.3916C21.1621 17.8791 19.9315 16.6485 18.4189 16.6485ZM18.4189 20.4889C17.8138 20.4889 17.3217 19.9968 17.3217 19.3916C17.3217 18.7865 17.8138 18.2944 18.4189 18.2944C19.0241 18.2944 19.5162 18.7865 19.5162 19.3916C19.5162 19.9968 19.0241 20.4889 18.4189 20.4889Z"
+                                        fill="#6D6E71" />
+                                    <path
+                                        d="M22.8251 6.04639C22.6693 5.84697 22.4304 5.73066 22.1772 5.73066H6.0798L5.33914 2.63173C5.25054 2.26142 4.91942 2 4.53867 2H1.82294C1.36842 1.99996 1 2.36837 1 2.8229C1 3.27743 1.36842 3.64584 1.82294 3.64584H3.88911L6.56367 14.8368C6.65227 15.2074 6.98339 15.4686 7.36414 15.4686H20.1747C20.553 15.4686 20.8827 15.2107 20.9735 14.8437L22.976 6.75134C23.0366 6.5056 22.9809 6.24581 22.8251 6.04639ZM19.5309 13.8227H8.0137L6.47314 7.37654H21.1257L19.5309 13.8227Z"
+                                        fill="#6D6E71" />
+                                    <path
+                                        d="M8.46092 16.6485C6.94832 16.6485 5.71777 17.8791 5.71777 19.3916C5.71777 20.9042 6.94836 22.1348 8.46092 22.1348C9.97347 22.1348 11.2041 20.9042 11.2041 19.3916C11.2041 17.8791 9.97347 16.6485 8.46092 16.6485ZM8.46092 20.4889C7.85578 20.4889 7.36366 19.9968 7.36366 19.3916C7.36366 18.7865 7.85578 18.2944 8.46092 18.2944C9.06605 18.2944 9.55817 18.7865 9.55817 19.3916C9.55817 19.9968 9.06605 20.4889 8.46092 20.4889Z"
+                                        fill="#6D6E71" />
+                                </svg>
+                                <span href="#" class="badge badge-danger">4</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M21.002 13.8H20.4004V5.40002C20.3993 4.60499 20.0831 3.84281 19.5211 3.28048C18.959 2.71816 18.197 2.40155 17.402 2.40002H5.40199C4.60646 2.40087 3.84373 2.71716 3.28105 3.27954C2.71837 3.84192 2.40166 4.60449 2.40039 5.40002V18.6C2.40166 19.3956 2.71837 20.1581 3.28105 20.7205C3.84373 21.2829 4.60646 21.5992 5.40199 21.6H17.402C18.197 21.5985 18.959 21.2819 19.5211 20.7196C20.0831 20.1572 20.3993 19.3951 20.4004 18.6V17.4H21.002C21.1608 17.3996 21.3131 17.3362 21.4252 17.2237C21.5374 17.1112 21.6004 16.9589 21.6004 16.8V14.4C21.6004 14.2412 21.5374 14.0888 21.4252 13.9763C21.3131 13.8638 21.1608 13.8004 21.002 13.8ZM3.60039 5.40002C3.6009 4.92251 3.79091 4.46473 4.12871 4.12723C4.46651 3.78973 4.92448 3.60011 5.40199 3.60002H17.402C17.879 3.60079 18.3362 3.79072 18.6734 4.12817C19.0105 4.46562 19.2001 4.92302 19.2004 5.40002V10.2151C18.8431 9.94074 18.4286 9.75063 17.9876 9.65891C17.9934 9.63966 17.9977 9.61997 18.0004 9.60002V5.40002C18.0004 5.24117 17.9374 5.0888 17.8252 4.97632C17.7131 4.86385 17.5608 4.80045 17.402 4.80002H6.00039C5.53294 4.80121 5.07229 4.91205 4.65547 5.12363C4.23864 5.33521 3.87727 5.64164 3.60039 6.01827V5.40002ZM6.00039 7.20002C5.62937 7.20128 5.26781 7.31729 4.96531 7.53213C4.66282 7.74697 4.43419 8.05012 4.31078 8.40002C4.2402 8.20779 4.2034 8.0048 4.20199 7.80002C4.20233 7.32302 4.39188 6.86561 4.72902 6.52817C5.06617 6.19072 5.52338 6.00079 6.00039 6.00002H16.8004V7.20002H6.00039ZM16.8004 8.40002V9.60002H6.00039C5.84126 9.60002 5.68865 9.53681 5.57613 9.42429C5.46361 9.31177 5.40039 9.15915 5.40039 9.00002C5.40039 8.84089 5.46361 8.68828 5.57613 8.57576C5.68865 8.46324 5.84126 8.40002 6.00039 8.40002H16.8004ZM19.2004 18.6C19.2001 19.0771 19.0106 19.5345 18.6735 19.872C18.3363 20.2094 17.879 20.3993 17.402 20.4H5.40199C4.92446 20.4 4.46645 20.2104 4.12863 19.8729C3.79081 19.5354 3.60081 19.0776 3.60039 18.6V10.184C4.11739 10.5808 4.75032 10.7968 5.40199 10.7991H17.402C17.879 10.7998 18.3362 10.9898 18.6734 11.3272C19.0105 11.6647 19.2001 12.1221 19.2004 12.5991V13.7991H16.202C15.7246 13.7991 15.2667 13.9887 14.9292 14.3263C14.5916 14.6638 14.402 15.1217 14.402 15.5991C14.402 16.0765 14.5916 16.5343 14.9292 16.8719C15.2667 17.2094 15.7246 17.3991 16.202 17.3991H19.2004V18.5991V18.6ZM20.4004 16.2H16.202C16.0429 16.2 15.8903 16.1368 15.7777 16.0243C15.6652 15.9118 15.602 15.7592 15.602 15.6C15.602 15.4409 15.6652 15.2883 15.7777 15.1758C15.8903 15.0632 16.0429 15 16.202 15H20.4004V16.2Z"
+                                        fill="#6D6E71" />
+                                </svg>
+                                <span>145 000</span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="container navbar-expand-sm">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav nav-fill nav-pills justify-content-center main-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Популярное</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Женское</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Платья</a>
+                                <a class="dropdown-item" href="#">Брюки</a>
+                                <a class="dropdown-item" href="#">Джинсы</a>
+                                <a class="dropdown-item" href="#">Кроссовки</a>
+                                <a class="dropdown-item" href="#">Ботинки</a>
+                                <a class="dropdown-item" href="#">Аксессуары</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Дети</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Платья</a>
+                                <a class="dropdown-item" href="#">Брюки</a>
+                                <a class="dropdown-item" href="#">Джинсы</a>
+                                <a class="dropdown-item" href="#">Кроссовки</a>
+                                <a class="dropdown-item" href="#">Ботинки</a>
+                                <a class="dropdown-item" href="#">Аксессуары</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Зимнее Снаряжение</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Платья</a>
+                                <a class="dropdown-item" href="#">Брюки</a>
+                                <a class="dropdown-item" href="#">Джинсы</a>
+                                <a class="dropdown-item" href="#">Кроссовки</a>
+                                <a class="dropdown-item" href="#">Ботинки</a>
+                                <a class="dropdown-item" href="#">Аксессуары</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Аксессуары</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Платья</a>
+                                <a class="dropdown-item" href="#">Брюки</a>
+                                <a class="dropdown-item" href="#">Джинсы</a>
+                                <a class="dropdown-item" href="#">Кроссовки</a>
+                                <a class="dropdown-item" href="#">Ботинки</a>
+                                <a class="dropdown-item" href="#">Аксессуары</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="content flex-grow-1">
+            <div class="container">
+                <h2>Корзина (4)</h2>
+                <div class="row my-5">
+                    <div class="col-lg-8 order-lg-1 order-2">
+                        <ul class="cart-list">
+                            <li class="card cart border-0">
+                                <div class="row">
+                                    <div class="col-md-4 card-image position-relative  ">
+                                        <img src="./images/product-1.jpg" alt="" class="w-100">
+                                        <button class="btn btn-icon empty">
+                                            <svg class="icon" width="28" height="28" viewBox="0 0 30 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 23C13.6204 23 13.2544 22.8686 12.9691 22.6299C11.8919 21.7299 10.8533 20.8842 9.93691 20.1382L9.93223 20.1343C7.24567 17.947 4.92572 16.058 3.31154 14.1973C1.50714 12.117 0.666687 10.1447 0.666687 7.99004C0.666687 5.8966 1.41803 3.96527 2.78217 2.55157C4.16258 1.12115 6.0567 0.333344 8.11623 0.333344C9.65554 0.333344 11.0652 0.798293 12.3061 1.71517C12.9323 2.17798 13.4999 2.74439 14 3.40508C14.5003 2.74439 15.0677 2.17798 15.6942 1.71517C16.935 0.798293 18.3447 0.333344 19.884 0.333344C21.9433 0.333344 23.8377 1.12115 25.2181 2.55157C26.5822 3.96527 27.3334 5.8966 27.3334 7.99004C27.3334 10.1447 26.4931 12.117 24.6887 14.1971C23.0745 16.058 20.7548 17.9468 18.0686 20.1339C17.1507 20.8811 16.1104 21.7282 15.0307 22.6303C14.7457 22.8686 14.3795 23 14 23Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-8 mt-4 mt-md-0 ">
+                                        <div class="card-body p-0 h-100 d-flex flex-column justify-content-between">
+                                            <h4 class="mb-0">Платье Миди</h4>
+                                            <span class="media-category mb-2">
+                                                Красное
+                                            </span>
+                                            <div>
+                                                <span class="price"><b>1 050 000</b> сум</span>
+                                                <span class="old-price">
+                                                    1 050 000 сум
+                                                </span>
+                                            </div>
+                                            <div class="d-flex flex-sm-row flex-column mt-4">
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-defaul btn-title ">Размер</button>
+                                                    <button type="button"
+                                                        class="btn btn-defaul  btn-dropdown justify-content-around dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        style="flex: 0 1 auto"
+                                                        data-reference="parent">
+                                                        <span class="mr-2"> M</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-defaul btn-dropdown justify-content-lg-around justify-content-between dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2">Красный</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group ">
+                                                    <button type="button"
+                                                        class="btn btn-defaul btn-dropdown justify-content-lg-around justify-content-between dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2">5шт</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-icon empty">
+                                                <svg class="icon" width="22" height="24" viewBox="0 0 22 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.7662 3.5625C20.4835 3.5625 15.7884 3.5625 15.5004 3.5625V0.9375C15.5004 0.419678 15.0974 0 14.6002 0H7.39911C6.90192 0 6.49897 0.419678 6.49897 0.9375V3.5625C6.211 3.5625 1.51655 3.5625 1.23315 3.5625C0.735961 3.5625 0.333008 3.98218 0.333008 4.5C0.333008 5.01782 0.735961 5.4375 1.23315 5.4375H2.89841V23.0625C2.89841 23.5803 3.30136 24 3.79855 24H18.2008C18.698 24 19.1009 23.5803 19.1009 23.0625V5.4375H20.7662C21.2634 5.4375 21.6663 5.01782 21.6663 4.5C21.6663 3.98218 21.2634 3.5625 20.7662 3.5625ZM8.29925 1.875H13.7001V3.5625H8.29925V1.875ZM17.3007 22.125H4.69869V5.4375H17.3007V22.125ZM9.4995 8.0625V19.5C9.4995 20.0178 9.09654 20.4375 8.59936 20.4375C8.10217 20.4375 7.69922 20.0178 7.69922 19.5V8.0625C7.69922 7.54468 8.10217 7.125 8.59936 7.125C9.09654 7.125 9.4995 7.54468 9.4995 8.0625ZM14.3001 8.0625V19.5C14.3001 20.0178 13.8972 20.4375 13.4 20.4375C12.9028 20.4375 12.4999 20.0178 12.4999 19.5V8.0625C12.4999 7.54468 12.9028 7.125 13.4 7.125C13.8972 7.125 14.3001 7.54468 14.3001 8.0625Z" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card cart border-0">
+                                <div class="row">
+                                    <div class="col-md-4 card-image position-relative  ">
+                                        <img src="./images/product-1.jpg" alt="" class="w-100">
+                                        <button class="btn btn-icon empty">
+                                            <svg class="icon" width="28" height="28" viewBox="0 0 30 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 23C13.6204 23 13.2544 22.8686 12.9691 22.6299C11.8919 21.7299 10.8533 20.8842 9.93691 20.1382L9.93223 20.1343C7.24567 17.947 4.92572 16.058 3.31154 14.1973C1.50714 12.117 0.666687 10.1447 0.666687 7.99004C0.666687 5.8966 1.41803 3.96527 2.78217 2.55157C4.16258 1.12115 6.0567 0.333344 8.11623 0.333344C9.65554 0.333344 11.0652 0.798293 12.3061 1.71517C12.9323 2.17798 13.4999 2.74439 14 3.40508C14.5003 2.74439 15.0677 2.17798 15.6942 1.71517C16.935 0.798293 18.3447 0.333344 19.884 0.333344C21.9433 0.333344 23.8377 1.12115 25.2181 2.55157C26.5822 3.96527 27.3334 5.8966 27.3334 7.99004C27.3334 10.1447 26.4931 12.117 24.6887 14.1971C23.0745 16.058 20.7548 17.9468 18.0686 20.1339C17.1507 20.8811 16.1104 21.7282 15.0307 22.6303C14.7457 22.8686 14.3795 23 14 23Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-8 mt-4 mt-md-0 ">
+                                        <div class="card-body p-0 h-100 d-flex flex-column justify-content-between">
+                                            <h4 class="mb-0">Платье Миди</h4>
+                                            <span class="media-category mb-2">
+                                                Красное
+                                            </span>
+                                            <div>
+                                                <span class="price"><b>1 050 000</b> сум</span>
+                                                <span class="old-price">
+                                                    1 050 000 сум
+                                                </span>
+                                            </div>
+                                            <div class="d-flex flex-sm-row flex-column mt-4">
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-defaul btn-title">Размер</button>
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-around dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        style="flex: 0 1 auto"
+                                                        data-reference="parent">
+                                                        <span class="mr-2"> M</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group">
+
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-lg-around justify-content-between dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2">Красный</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group ">
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-lg-around justify-content-between dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2">5шт</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-icon empty">
+                                                <svg class="icon" width="22" height="24" viewBox="0 0 22 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.7662 3.5625C20.4835 3.5625 15.7884 3.5625 15.5004 3.5625V0.9375C15.5004 0.419678 15.0974 0 14.6002 0H7.39911C6.90192 0 6.49897 0.419678 6.49897 0.9375V3.5625C6.211 3.5625 1.51655 3.5625 1.23315 3.5625C0.735961 3.5625 0.333008 3.98218 0.333008 4.5C0.333008 5.01782 0.735961 5.4375 1.23315 5.4375H2.89841V23.0625C2.89841 23.5803 3.30136 24 3.79855 24H18.2008C18.698 24 19.1009 23.5803 19.1009 23.0625V5.4375H20.7662C21.2634 5.4375 21.6663 5.01782 21.6663 4.5C21.6663 3.98218 21.2634 3.5625 20.7662 3.5625ZM8.29925 1.875H13.7001V3.5625H8.29925V1.875ZM17.3007 22.125H4.69869V5.4375H17.3007V22.125ZM9.4995 8.0625V19.5C9.4995 20.0178 9.09654 20.4375 8.59936 20.4375C8.10217 20.4375 7.69922 20.0178 7.69922 19.5V8.0625C7.69922 7.54468 8.10217 7.125 8.59936 7.125C9.09654 7.125 9.4995 7.54468 9.4995 8.0625ZM14.3001 8.0625V19.5C14.3001 20.0178 13.8972 20.4375 13.4 20.4375C12.9028 20.4375 12.4999 20.0178 12.4999 19.5V8.0625C12.4999 7.54468 12.9028 7.125 13.4 7.125C13.8972 7.125 14.3001 7.54468 14.3001 8.0625Z" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card cart border-0">
+                                <div class="row">
+                                    <div class="col-md-4 card-image position-relative">
+                                        <img src="./images/product-1.jpg" alt="" class="w-100">
+                                        <button class="btn btn-icon empty">
+                                            <svg class="icon" width="28" height="28" viewBox="0 0 30 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 23C13.6204 23 13.2544 22.8686 12.9691 22.6299C11.8919 21.7299 10.8533 20.8842 9.93691 20.1382L9.93223 20.1343C7.24567 17.947 4.92572 16.058 3.31154 14.1973C1.50714 12.117 0.666687 10.1447 0.666687 7.99004C0.666687 5.8966 1.41803 3.96527 2.78217 2.55157C4.16258 1.12115 6.0567 0.333344 8.11623 0.333344C9.65554 0.333344 11.0652 0.798293 12.3061 1.71517C12.9323 2.17798 13.4999 2.74439 14 3.40508C14.5003 2.74439 15.0677 2.17798 15.6942 1.71517C16.935 0.798293 18.3447 0.333344 19.884 0.333344C21.9433 0.333344 23.8377 1.12115 25.2181 2.55157C26.5822 3.96527 27.3334 5.8966 27.3334 7.99004C27.3334 10.1447 26.4931 12.117 24.6887 14.1971C23.0745 16.058 20.7548 17.9468 18.0686 20.1339C17.1507 20.8811 16.1104 21.7282 15.0307 22.6303C14.7457 22.8686 14.3795 23 14 23Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-8 mt-4 mt-md-0 ">
+                                        <div class="card-body p-0 h-100 d-flex flex-column justify-content-between">
+                                            <h4 class="mb-0">Платье Миди</h4>
+                                            <span class="media-category mb-2">
+                                                Красное
+                                            </span>
+                                            <div>
+                                                <span class="price"><b>1 050 000</b> сум</span>
+                                                <span class="old-price">
+                                                    1 050 000 сум
+                                                </span>
+                                            </div>
+                                            <div class="d-flex flex-sm-row flex-column mt-4">
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-defaul btn-title">Размер</button>
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-around dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        style="flex: 0 1 auto"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2"> M</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group">
+
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-lg-around justify-content-between dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2">Красный</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group ">
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-lg-around justify-content-between dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2">5шт</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-icon empty">
+                                                <svg class="icon" width="22" height="24" viewBox="0 0 22 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.7662 3.5625C20.4835 3.5625 15.7884 3.5625 15.5004 3.5625V0.9375C15.5004 0.419678 15.0974 0 14.6002 0H7.39911C6.90192 0 6.49897 0.419678 6.49897 0.9375V3.5625C6.211 3.5625 1.51655 3.5625 1.23315 3.5625C0.735961 3.5625 0.333008 3.98218 0.333008 4.5C0.333008 5.01782 0.735961 5.4375 1.23315 5.4375H2.89841V23.0625C2.89841 23.5803 3.30136 24 3.79855 24H18.2008C18.698 24 19.1009 23.5803 19.1009 23.0625V5.4375H20.7662C21.2634 5.4375 21.6663 5.01782 21.6663 4.5C21.6663 3.98218 21.2634 3.5625 20.7662 3.5625ZM8.29925 1.875H13.7001V3.5625H8.29925V1.875ZM17.3007 22.125H4.69869V5.4375H17.3007V22.125ZM9.4995 8.0625V19.5C9.4995 20.0178 9.09654 20.4375 8.59936 20.4375C8.10217 20.4375 7.69922 20.0178 7.69922 19.5V8.0625C7.69922 7.54468 8.10217 7.125 8.59936 7.125C9.09654 7.125 9.4995 7.54468 9.4995 8.0625ZM14.3001 8.0625V19.5C14.3001 20.0178 13.8972 20.4375 13.4 20.4375C12.9028 20.4375 12.4999 20.0178 12.4999 19.5V8.0625C12.4999 7.54468 12.9028 7.125 13.4 7.125C13.8972 7.125 14.3001 7.54468 14.3001 8.0625Z" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="card cart border-0">
+                                <div class="row">
+                                    <div class="col-md-4 card-image position-relative  ">
+                                        <img src="./images/product-1.jpg" alt="" class="w-100">
+                                        <button class="btn btn-icon empty">
+                                            <svg class="icon" width="28" height="28" viewBox="0 0 30 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 23C13.6204 23 13.2544 22.8686 12.9691 22.6299C11.8919 21.7299 10.8533 20.8842 9.93691 20.1382L9.93223 20.1343C7.24567 17.947 4.92572 16.058 3.31154 14.1973C1.50714 12.117 0.666687 10.1447 0.666687 7.99004C0.666687 5.8966 1.41803 3.96527 2.78217 2.55157C4.16258 1.12115 6.0567 0.333344 8.11623 0.333344C9.65554 0.333344 11.0652 0.798293 12.3061 1.71517C12.9323 2.17798 13.4999 2.74439 14 3.40508C14.5003 2.74439 15.0677 2.17798 15.6942 1.71517C16.935 0.798293 18.3447 0.333344 19.884 0.333344C21.9433 0.333344 23.8377 1.12115 25.2181 2.55157C26.5822 3.96527 27.3334 5.8966 27.3334 7.99004C27.3334 10.1447 26.4931 12.117 24.6887 14.1971C23.0745 16.058 20.7548 17.9468 18.0686 20.1339C17.1507 20.8811 16.1104 21.7282 15.0307 22.6303C14.7457 22.8686 14.3795 23 14 23Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-8 mt-4 mt-md-0 ">
+                                        <div class="card-body p-0 h-100 d-flex flex-column justify-content-between">
+                                            <h4 class="mb-0">Платье Миди</h4>
+                                            <span class="media-category mb-2">
+                                                Красное
+                                            </span>
+                                            <div>
+                                                <span class="price"><b>1 050 000</b> сум</span>
+                                                <span class="old-price">
+                                                    1 050 000 сум
+                                                </span>
+                                            </div>
+                                            <div class="d-flex flex-sm-row flex-column mt-4">
+                                                <div class="btn-group">
+                                                    <button type="button"
+                                                        class="btn btn-defaul btn-title">Размер</button>
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-around dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        style="flex: 0 1 auto"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2"> M</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group">
+
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-lg-around justify-content-between dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2">Красный</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="btn-group ">
+                                                    <button type="button"
+                                                        class="btn btn-defaul justify-content-lg-around justify-content-between dropdown-toggle dropdown-toggle-split"
+                                                        id="dropdownMenuReference" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false"
+                                                        data-reference="parent">
+                                                        <span class="mr-2">5шт</span>
+                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right"
+                                                        aria-labelledby="dropdownMenuReference">
+                                                        <a class="dropdown-item" href="#">Action</a>
+                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                        <a class="dropdown-item" href="#">Something else here</a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-icon empty">
+                                                <svg class="icon" width="22" height="24" viewBox="0 0 22 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M20.7662 3.5625C20.4835 3.5625 15.7884 3.5625 15.5004 3.5625V0.9375C15.5004 0.419678 15.0974 0 14.6002 0H7.39911C6.90192 0 6.49897 0.419678 6.49897 0.9375V3.5625C6.211 3.5625 1.51655 3.5625 1.23315 3.5625C0.735961 3.5625 0.333008 3.98218 0.333008 4.5C0.333008 5.01782 0.735961 5.4375 1.23315 5.4375H2.89841V23.0625C2.89841 23.5803 3.30136 24 3.79855 24H18.2008C18.698 24 19.1009 23.5803 19.1009 23.0625V5.4375H20.7662C21.2634 5.4375 21.6663 5.01782 21.6663 4.5C21.6663 3.98218 21.2634 3.5625 20.7662 3.5625ZM8.29925 1.875H13.7001V3.5625H8.29925V1.875ZM17.3007 22.125H4.69869V5.4375H17.3007V22.125ZM9.4995 8.0625V19.5C9.4995 20.0178 9.09654 20.4375 8.59936 20.4375C8.10217 20.4375 7.69922 20.0178 7.69922 19.5V8.0625C7.69922 7.54468 8.10217 7.125 8.59936 7.125C9.09654 7.125 9.4995 7.54468 9.4995 8.0625ZM14.3001 8.0625V19.5C14.3001 20.0178 13.8972 20.4375 13.4 20.4375C12.9028 20.4375 12.4999 20.0178 12.4999 19.5V8.0625C12.4999 7.54468 12.9028 7.125 13.4 7.125C13.8972 7.125 14.3001 7.54468 14.3001 8.0625Z" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 order-lg-2 order-1">
+                        <div class="card checkout">
+                            <div class="card-header">
+                                <h4 class="mb-0">Итого</h4>
+                                <div class="price"><b class="text-dark">51 965 000</b> сум</div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item ">
+                                        <span>
+                                            <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20.5375 16.2762L18.2999 14.0385C17.6829 13.4216 16.6791 13.4216 16.0622 14.0385L15.0451 15.0556C14.5777 15.523 13.8172 15.5229 13.35 15.0558L8.94142 10.6434C8.47297 10.175 8.4729 9.41677 8.94142 8.94824C9.10525 8.78442 9.57568 8.31399 9.95853 7.93114C10.5727 7.31695 10.5813 6.31623 9.95793 5.69291L7.72087 3.46287C7.10394 2.84598 6.10012 2.84598 5.48485 3.46125C5.02445 3.91765 4.87595 4.06489 4.66951 4.26953C2.44482 6.49419 2.44482 10.114 4.6694 12.3386L11.6547 19.3275C13.8846 21.5575 17.4937 21.5576 19.7238 19.3275L20.5375 18.5138C21.1544 17.8969 21.1544 16.8931 20.5375 16.2762ZM6.22911 4.20875C6.43474 4.00312 6.76929 4.00308 6.97559 4.20931L9.21265 6.43935C9.41878 6.64547 9.41878 6.97907 9.21265 7.18522L8.83968 7.55816L5.85807 4.57655L6.22911 4.20875ZM12.4007 18.5818L5.41539 11.5927C3.6942 9.87156 3.5996 7.16891 5.12443 5.3347L8.09739 8.30766C7.31622 9.19321 7.34877 10.5426 8.19537 11.3892L12.6038 15.8014C12.6039 15.8014 12.6039 15.8015 12.604 15.8015C13.4497 16.6472 14.799 16.6819 15.6856 15.8997L18.6587 18.8727C16.8303 20.3949 14.1337 20.3148 12.4007 18.5818ZM19.7917 17.768L19.4187 18.1409L16.4352 15.1573L16.8081 14.7844C17.0137 14.5788 17.3483 14.5787 17.554 14.7844L19.7916 17.0221C19.9973 17.2277 19.9973 17.5624 19.7917 17.768Z"
+                                                    fill="#6D6E71" />
+                                            </svg>
+                                        </span>
+                                        +998 98 997 76 56
+                                    </li>
+                                    <li class="list-group-item">
+                                        <svg class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20.5375 16.2762L18.2999 14.0385C17.6829 13.4216 16.6791 13.4216 16.0622 14.0385L15.0451 15.0556C14.5777 15.523 13.8172 15.5229 13.35 15.0558L8.94142 10.6434C8.47297 10.175 8.4729 9.41677 8.94142 8.94824C9.10525 8.78442 9.57568 8.31399 9.95853 7.93114C10.5727 7.31695 10.5813 6.31623 9.95793 5.69291L7.72087 3.46287C7.10394 2.84598 6.10012 2.84598 5.48485 3.46125C5.02445 3.91765 4.87595 4.06489 4.66951 4.26953C2.44482 6.49419 2.44482 10.114 4.6694 12.3386L11.6547 19.3275C13.8846 21.5575 17.4937 21.5576 19.7238 19.3275L20.5375 18.5138C21.1544 17.8969 21.1544 16.8931 20.5375 16.2762ZM6.22911 4.20875C6.43474 4.00312 6.76929 4.00308 6.97559 4.20931L9.21265 6.43935C9.41878 6.64547 9.41878 6.97907 9.21265 7.18522L8.83968 7.55816L5.85807 4.57655L6.22911 4.20875ZM12.4007 18.5818L5.41539 11.5927C3.6942 9.87156 3.5996 7.16891 5.12443 5.3347L8.09739 8.30766C7.31622 9.19321 7.34877 10.5426 8.19537 11.3892L12.6038 15.8014C12.6039 15.8014 12.6039 15.8015 12.604 15.8015C13.4497 16.6472 14.799 16.6819 15.6856 15.8997L18.6587 18.8727C16.8303 20.3949 14.1337 20.3148 12.4007 18.5818ZM19.7917 17.768L19.4187 18.1409L16.4352 15.1573L16.8081 14.7844C17.0137 14.5788 17.3483 14.5787 17.554 14.7844L19.7916 17.0221C19.9973 17.2277 19.9973 17.5624 19.7917 17.768Z"
+                                                fill="#6D6E71" />
+                                        </svg>
+                                        +998 98 997 76 56
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-danger btn-lg w-100 justify-content-center">
+                                    <svg class="icon icon-cart" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.419 16.6485C16.9064 16.6485 15.6759 17.8791 15.6759 19.3916C15.6759 20.9042 16.9065 22.1348 18.419 22.1348C19.9316 22.1348 21.1622 20.9042 21.1622 19.3916C21.1622 17.8791 19.9316 16.6485 18.419 16.6485ZM18.419 20.4889C17.8139 20.4889 17.3218 19.9968 17.3218 19.3916C17.3218 18.7865 17.8139 18.2944 18.419 18.2944C19.0242 18.2944 19.5163 18.7865 19.5163 19.3916C19.5163 19.9968 19.0242 20.4889 18.419 20.4889Z">
+                                        </path>
+                                        <path
+                                            d="M22.8251 6.04639C22.6693 5.84697 22.4304 5.73066 22.1772 5.73066H6.0798L5.33914 2.63173C5.25054 2.26142 4.91942 2 4.53867 2H1.82294C1.36842 1.99996 1 2.36837 1 2.8229C1 3.27743 1.36842 3.64584 1.82294 3.64584H3.88911L6.56367 14.8368C6.65227 15.2074 6.98339 15.4686 7.36414 15.4686H20.1747C20.553 15.4686 20.8827 15.2107 20.9735 14.8437L22.976 6.75134C23.0366 6.5056 22.9809 6.24581 22.8251 6.04639ZM19.5309 13.8227H8.0137L6.47314 7.37654H21.1257L19.5309 13.8227Z">
+                                        </path>
+                                        <path
+                                            d="M8.46134 16.6485C6.94875 16.6485 5.7182 17.8791 5.7182 19.3916C5.7182 20.9042 6.94879 22.1348 8.46134 22.1348C9.9739 22.1348 11.2045 20.9042 11.2045 19.3916C11.2045 17.8791 9.9739 16.6485 8.46134 16.6485ZM8.46134 20.4889C7.85621 20.4889 7.36409 19.9968 7.36409 19.3916C7.36409 18.7865 7.85621 18.2944 8.46134 18.2944C9.06648 18.2944 9.5586 18.7865 9.5586 19.3916C9.5586 19.9968 9.06648 20.4889 8.46134 20.4889Z">
+                                        </path>
+                                    </svg>
+                                    Далее
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <ul class="nav social-links">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M20.0002 3.33167C15.4735 3.33167 14.9054 3.35146 13.1275 3.43237C11.3531 3.51362 10.1419 3.79454 9.08211 4.20672C7.98586 4.63244 7.05594 5.20192 6.12949 6.12872C5.20235 7.05516 4.63287 7.98508 4.20576 9.08098C3.79254 10.1411 3.51127 11.3527 3.43141 13.1264C3.35189 14.9043 3.33105 15.4727 3.33105 19.9994C3.33105 24.526 3.35119 25.0924 3.43176 26.8703C3.51336 28.6447 3.79428 29.8559 4.20611 30.9157C4.63218 32.0119 5.20166 32.9419 6.12845 33.8683C7.05455 34.7954 7.98447 35.3663 9.08003 35.792C10.1405 36.2042 11.352 36.4851 13.1261 36.5664C14.904 36.6473 15.4717 36.6671 19.9981 36.6671C24.5251 36.6671 25.0915 36.6473 26.8693 36.5664C28.6438 36.4851 29.8563 36.2042 30.9168 35.792C32.0127 35.3663 32.9413 34.7954 33.8674 33.8683C34.7945 32.9419 35.364 32.0119 35.7911 30.916C36.2008 29.8559 36.4821 28.6444 36.5654 26.8706C36.6453 25.0927 36.6661 24.526 36.6661 19.9994C36.6661 15.4727 36.6453 14.9046 36.5654 13.1267C36.4821 11.3523 36.2008 10.1411 35.7911 9.08133C35.364 7.98508 34.7945 7.05516 33.8674 6.12872C32.9402 5.20157 32.0131 4.63209 30.9158 4.20672C29.8532 3.79454 28.6413 3.51362 26.8669 3.43237C25.089 3.35146 24.523 3.33167 19.9949 3.33167H20.0002ZM19.4442 6.33516H19.4444H19.4446L20.0001 6.33533C24.4504 6.33533 24.9779 6.3513 26.7353 6.43117C28.3604 6.50548 29.2424 6.77702 29.8299 7.00516C30.6077 7.30726 31.1623 7.6684 31.7453 8.25177C32.3287 8.83514 32.6898 9.39073 32.9926 10.1686C33.2207 10.7554 33.4926 11.6374 33.5666 13.2625C33.6465 15.0196 33.6638 15.5474 33.6638 19.9956C33.6638 24.4438 33.6465 24.9716 33.5666 26.7286C33.4923 28.3537 33.2207 29.2357 32.9926 29.8226C32.6905 30.6004 32.3287 31.1542 31.7453 31.7373C31.1619 32.3206 30.6081 32.6818 29.8299 32.9839C29.2431 33.2131 28.3604 33.4839 26.7353 33.5582C24.9782 33.6381 24.4504 33.6554 20.0001 33.6554C15.5495 33.6554 15.022 33.6381 13.265 33.5582C11.6399 33.4832 10.7579 33.2117 10.17 32.9835C9.39216 32.6814 8.83657 32.3203 8.2532 31.7369C7.66983 31.1535 7.3087 30.5993 7.0059 29.8212C6.77776 29.2343 6.50587 28.3523 6.43191 26.7272C6.35204 24.9702 6.33607 24.4424 6.33607 19.9914C6.33607 15.5404 6.35204 15.0154 6.43191 13.2583C6.50622 11.6332 6.77776 10.7512 7.0059 10.1637C7.30801 9.38586 7.66983 8.83027 8.2532 8.2469C8.83657 7.66353 9.39216 7.3024 10.17 6.9996C10.7575 6.77042 11.6399 6.49957 13.265 6.42492C14.8026 6.35547 15.3984 6.33463 18.5049 6.33116V6.33533C18.7951 6.33487 19.1073 6.33501 19.4442 6.33516ZM28.8974 9.10286C27.7932 9.10286 26.8973 9.9977 26.8973 11.1023C26.8973 12.2065 27.7932 13.1024 28.8974 13.1024C30.0016 13.1024 30.8975 12.2065 30.8975 11.1023C30.8975 9.99805 30.0016 9.10216 28.8974 9.10216V9.10286ZM11.4406 19.9994C11.4406 15.2723 15.2731 11.4398 20.0002 11.4398C24.727 11.44 28.5583 15.2725 28.5583 19.9994C28.5583 24.7264 24.7272 28.5572 20.0002 28.5572C15.2731 28.5572 11.4406 24.7264 11.4406 19.9994ZM25.5561 19.9994C25.5561 16.9308 23.0684 14.4435 20.0002 14.4435C16.9316 14.4435 14.4443 16.9308 14.4443 19.9994C14.4443 23.0676 16.9316 25.5553 20.0002 25.5553C23.0684 25.5553 25.5561 23.0676 25.5561 19.9994Z"
+                                        fill="#6D6E71" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M22.0083 36.6667V19.9981H26.6096L27.2193 14.254H22.0083L22.0161 11.379C22.0161 9.88087 22.1584 9.07812 24.3102 9.07812H27.1867V3.33337H22.5848C17.0572 3.33337 15.1116 6.11988 15.1116 10.8059V14.2546H11.666V19.9987H15.1116V36.6667H22.0083Z"
+                                        fill="#6D6E71" />
+                                </svg>
+
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="copyright">
+                        &copy; 2020 Urbanstore.uz.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
