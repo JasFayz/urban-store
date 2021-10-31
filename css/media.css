@@ -27,8 +27,23 @@
         margin-right : 0;
         margin-bottom: 24px;
     }
+
     .cabinet__form .btn-exit {
         margin-right: 0;
+    }
+
+    .order__body {
+        flex-direction: column;
+    }
+    .order__image img {
+        width: 100%;
+    }
+    .order__info {
+        padding-left: 0;
+    }
+
+    .order__info .name {
+        margin-top: 10px;
     }
 }
 
@@ -76,7 +91,7 @@
         flex-direction: column;
         align-items   : center;
     }
-    
+
 }
 
 @media (max-width: 478px) {
