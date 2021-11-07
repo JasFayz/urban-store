@@ -51,9 +51,8 @@
 
 
                     <ul class="navbar-nav ml-0 ml-sm-auto nav-action order-md-3 flex-row">
-                        <li class="nav-item dropdown  search">
-                            <a class="nav-link bg-transparent" href="#" role="button" id="dropdownMenuLink"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <li class="nav-item   search">
+                            <a class="nav-link bg-transparent" href="#" data-toggle="modal" data-target="#exampleModal">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -62,11 +61,10 @@
                                 </svg>
 
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-menu search" aria-labelledby="dropdownMenuLink"
+                                style="left: 50%; transform: translateX(-100%);">
                                 <div class="dropdown-item">
-                                    <div class="input-group">
-                                        <input type="text" class="from-control">
-                                    </div>
+
                                 </div>
                             </div>
                         </li>
@@ -185,7 +183,99 @@
             </div>
         </header>
 
+        <div class="modal fade search__modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="search__wrapper">
+                            <div class="search__header">
+                                <input type="text" class="form-control" value="hoddie">
+                            </div>
+                            <div class="search__body">
+                                <div class="search_product-cat">
+                                    <h4 class="label">Suggestions</h4>
+                                    <a href="" class="link">
+                                        <div class="title">Hoddie</div>
+                                        <div class="count"> 825</div>
+                                    </a>
+                                    <a href="" class="link">
+                                        <div class="title">Hoddie men</div>
+                                        <div class="count"> 460</div>
+                                    </a>
+                                    <a href="" class="link">
+                                        <div class="title">Hoddie woomen</div>
+                                        <div class="count"> 316</div>
+                                    </a>
+                                    <a href="" class="link">
+                                        <div class="title">TRefol Hoddie</div>
+                                        <div class="count"> 116</div>
+                                    </a>
 
+
+
+                                </div>
+                                <div class="search__product">
+                                    <h4 class="label">Products</h4>
+                                    <a href class="item">
+                                        <div class="image">
+                                            <img src="./images/dress-9.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="info">
+                                            <div class="type">Woomes sportwear</div>
+                                            <div class="title">Adidas sportwear Adidas sportwear</div>
+                                            <div class="price">$80</div>
+                                        </div>
+                                    </a>
+                                    <a href class="item">
+                                        <div class="image">
+                                            <img src="./images/dress-9.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="info">
+                                            <div class="type">Woomes sportwear</div>
+                                            <div class="title">Adidas sportwear Adidas sportwear</div>
+                                            <div class="price">$80</div>
+                                        </div>
+                                    </a>
+                                    <a href class="item">
+                                        <div class="image">
+                                            <img src="./images/dress-7.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="info">
+                                            <div class="type">Woomes sportwear</div>
+                                            <div class="title">Adidas sportwear Adidas sportwear</div>
+                                            <div class="price">$80</div>
+                                        </div>
+                                    </a>
+                                    <a href class="item">
+                                        <div class="image">
+                                            <img src="./images/dress-6.jpg" alt="" class="w-100">
+                                        </div>
+                                        <div class="info">
+                                            <div class="type">Woomes sportwear</div>
+                                            <div class="title">Adidas sportwear Adidas sportwear</div>
+                                            <div class="price">$80</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="search__footer">
+                                <a href="" class="link all">
+                                    SEE all "Hoddies"
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
         <div class="content cabinet">
             <div class="container">
@@ -310,22 +400,24 @@
                                         </label>
                                         <input type="text" class="form-control" placeholder="+998 90 365 65 45">
                                     </div>
-                                    <div class="input-group">
-                                        <label for="" class="label">
+                                    <div class="input-group" style="user-select: none;">
+                                        <label class="label">
                                             Уведомление
                                         </label>
                                         <div class="custom-control custom-switch">
                                             <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                            <label class="custom-control-label" for="customSwitch1"> </label>
+                                            <label class="custom-control-label" for="customSwitch1">
+
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="input-group column">
-                                        <label for="">
+                                        <label style="pointer-events: none;">
                                             Поменять язык
                                         </label>
                                         <div class="d-flex flex-column flex-sm-row">
-                                            <label class="custom-control custom-checkbox mr-4">
-                                                <input type="radio" name="lang" id="" value="checkedValue"
+                                            <label for="lang_ru" class="custom-control custom-checkbox mr-4">
+                                                <input type="radio" name="lang" id="lang_ru" value="checkedValue"
                                                     class="custom-control-input" checked>
                                                 <span class="custom-control-indicator"></span>
                                                 <span class="custom-control-description">

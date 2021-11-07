@@ -35,15 +35,45 @@
     .order__body {
         flex-direction: column;
     }
+
     .order__image img {
         width: 100%;
     }
+
     .order__info {
         padding-left: 0;
     }
 
     .order__info .name {
         margin-top: 10px;
+    }
+
+
+    .search__body {
+        flex-direction: column;
+    }
+
+    .search__product .item {
+        flex-direction: column;
+    }
+
+    .search__product {
+        flex     : 1 0 auto;
+        max-width: 100%;
+    }
+
+    .search__product .item .info {
+        flex     : 1 0 auto;
+        max-width: 100%;
+    }
+
+    .search__product .item .image {
+        flex     : 1 0 auto;
+        max-width: 100%;
+    }
+
+    .search__footer .link.all {
+        justify-content: center;
     }
 }
 
