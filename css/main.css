@@ -1832,7 +1832,7 @@ label {
     border-radius: 7px;
     opacity      : 0;
     z-index      : -1;
-    transition: all 0.5s linear;
+    transition   : all 0.5s linear;
 }
 
 .search__ui.show {
@@ -1940,10 +1940,11 @@ label {
 }
 
 .search__product {
-    flex     : 1 0 60%;
-    max-width: 60%;
-    padding  : 15px;
-
+    flex      : 1 0 60%;
+    max-width : 60%;
+    padding   : 15px;
+    max-height: 575px;
+    overflow-y: scroll;
 }
 
 .search__product .item {

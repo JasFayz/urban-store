@@ -53,13 +53,19 @@
         flex-direction: column;
     }
 
+    .search__ui {
+        top: 100px;
+    }
+
     .search__product .item {
         flex-direction: column;
     }
 
     .search__product {
-        flex     : 1 0 auto;
-        max-width: 100%;
+        flex      : 1 0 auto;
+        max-width : 100%;
+        max-height: initial;
+        overflow-y: visible;
     }
 
     .search__product .item .info {
