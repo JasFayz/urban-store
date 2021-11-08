@@ -51,21 +51,18 @@
 
 
                     <ul class="navbar-nav ml-0 ml-sm-auto nav-action order-md-3 flex-row">
-                        <li class="nav-item   search">
-                            <a class="nav-link bg-transparent" href="#" data-toggle="modal" data-target="#exampleModal">
+                        <li class="nav-item  search">
+                            <a class="nav-link bg-transparent search__btn" href="#" data-toggle="modal"
+                                data-target="#exampleModal">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M19.0156 18.2168L14.2555 13.2662C15.4794 11.8113 16.15 9.98069 16.15 8.07499C16.15 3.62251 12.5275 0 8.07499 0C3.62251 0 0 3.62251 0 8.07499C0 12.5275 3.62251 16.15 8.07499 16.15C9.74652 16.15 11.3394 15.6458 12.7013 14.6888L17.4975 19.677C17.6979 19.8852 17.9676 20 18.2565 20C18.53 20 18.7895 19.8957 18.9864 19.7061C19.4049 19.3034 19.4182 18.6357 19.0156 18.2168ZM8.07499 2.10652C11.3661 2.10652 14.0435 4.78391 14.0435 8.07499C14.0435 11.3661 11.3661 14.0435 8.07499 14.0435C4.78391 14.0435 2.10652 11.3661 2.10652 8.07499C2.10652 4.78391 4.78391 2.10652 8.07499 2.10652Z"
                                         fill="#6D6E71" />
                                 </svg>
-
                             </a>
-                            <div class="dropdown-menu search" aria-labelledby="dropdownMenuLink"
-                                style="left: 50%; transform: translateX(-100%);">
-                                <div class="dropdown-item">
-
-                                </div>
+                            <div class="search__field ">
+                                <input type="text">
                             </div>
                         </li>
                         <li class="nav-item">
@@ -181,101 +178,86 @@
                     </ul>
                 </div>
             </div>
-        </header>
+            <div class="search__ui">
+                <div class="search__wrapper">
 
-        <div class="modal fade search__modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Search</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="search__wrapper">
-                            <div class="search__header">
-                                <input type="text" class="form-control" value="hoddie">
-                            </div>
-                            <div class="search__body">
-                                <div class="search_product-cat">
-                                    <h4 class="label">Suggestions</h4>
-                                    <a href="" class="link">
-                                        <div class="title">Hoddie</div>
-                                        <div class="count"> 825</div>
-                                    </a>
-                                    <a href="" class="link">
-                                        <div class="title">Hoddie men</div>
-                                        <div class="count"> 460</div>
-                                    </a>
-                                    <a href="" class="link">
-                                        <div class="title">Hoddie woomen</div>
-                                        <div class="count"> 316</div>
-                                    </a>
-                                    <a href="" class="link">
-                                        <div class="title">TRefol Hoddie</div>
-                                        <div class="count"> 116</div>
-                                    </a>
+                    <div class="search__body">
+                        <div class="search_product-cat">
+                            <h4 class="label">Suggestions</h4>
+                            <a href="" class="link">
+                                <div class="title">Hoddie</div>
+                                <div class="count"> 825</div>
+                            </a>
+                            <a href="" class="link">
+                                <div class="title">Hoddie men</div>
+                                <div class="count"> 460</div>
+                            </a>
+                            <a href="" class="link">
+                                <div class="title">Hoddie woomen</div>
+                                <div class="count"> 316</div>
+                            </a>
+                            <a href="" class="link">
+                                <div class="title">TRefol Hoddie</div>
+                                <div class="count"> 116</div>
+                            </a>
 
 
 
+                        </div>
+                        <div class="search__product">
+                            <h4 class="label">Products</h4>
+                            <a href class="item">
+                                <div class="image">
+                                    <img src="./images/dress-9.jpg" alt="" class="w-100">
                                 </div>
-                                <div class="search__product">
-                                    <h4 class="label">Products</h4>
-                                    <a href class="item">
-                                        <div class="image">
-                                            <img src="./images/dress-9.jpg" alt="" class="w-100">
-                                        </div>
-                                        <div class="info">
-                                            <div class="type">Woomes sportwear</div>
-                                            <div class="title">Adidas sportwear Adidas sportwear</div>
-                                            <div class="price">$80</div>
-                                        </div>
-                                    </a>
-                                    <a href class="item">
-                                        <div class="image">
-                                            <img src="./images/dress-9.jpg" alt="" class="w-100">
-                                        </div>
-                                        <div class="info">
-                                            <div class="type">Woomes sportwear</div>
-                                            <div class="title">Adidas sportwear Adidas sportwear</div>
-                                            <div class="price">$80</div>
-                                        </div>
-                                    </a>
-                                    <a href class="item">
-                                        <div class="image">
-                                            <img src="./images/dress-7.jpg" alt="" class="w-100">
-                                        </div>
-                                        <div class="info">
-                                            <div class="type">Woomes sportwear</div>
-                                            <div class="title">Adidas sportwear Adidas sportwear</div>
-                                            <div class="price">$80</div>
-                                        </div>
-                                    </a>
-                                    <a href class="item">
-                                        <div class="image">
-                                            <img src="./images/dress-6.jpg" alt="" class="w-100">
-                                        </div>
-                                        <div class="info">
-                                            <div class="type">Woomes sportwear</div>
-                                            <div class="title">Adidas sportwear Adidas sportwear</div>
-                                            <div class="price">$80</div>
-                                        </div>
-                                    </a>
+                                <div class="info">
+                                    <div class="type">Woomes sportwear</div>
+                                    <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="price">$80</div>
                                 </div>
-                            </div>
-                            <div class="search__footer">
-                                <a href="" class="link all">
-                                    SEE all "Hoddies"
-                                </a>
-                            </div>
+                            </a>
+                            <a href class="item">
+                                <div class="image">
+                                    <img src="./images/dress-9.jpg" alt="" class="w-100">
+                                </div>
+                                <div class="info">
+                                    <div class="type">Woomes sportwear</div>
+                                    <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="price">$80</div>
+                                </div>
+                            </a>
+                            <a href class="item">
+                                <div class="image">
+                                    <img src="./images/dress-7.jpg" alt="" class="w-100">
+                                </div>
+                                <div class="info">
+                                    <div class="type">Woomes sportwear</div>
+                                    <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="price">$80</div>
+                                </div>
+                            </a>
+                            <a href class="item">
+                                <div class="image">
+                                    <img src="./images/dress-6.jpg" alt="" class="w-100">
+                                </div>
+                                <div class="info">
+                                    <div class="type">Woomes sportwear</div>
+                                    <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="price">$80</div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-
+                    <div class="search__footer">
+                        <a href="" class="link all">
+                            SEE all "Hoddies"
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </header>
+
+
 
         <div class="content cabinet">
             <div class="container">
@@ -507,6 +489,17 @@
             format: 'dd/MM/yyyy',
             language: 'ru'
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.search__btn').click(function () {
+                $('.search__field').toggleClass('show')
+            })
+            $('.search__field input').keyup(function () {
+                console.log('qweqwe')
+                $('.search__ui').addClass('show')
+            })
+        })
     </script>
 </body>
 
