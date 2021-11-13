@@ -81,6 +81,13 @@
     .search__footer .link.all {
         justify-content: center;
     }
+
+    .header .dropdown-lang {
+        position: absolute;
+        top     : 15px;
+        left    : 75px;
+    }
+
 }
 
 @media (max-width: 556px) {
@@ -128,6 +135,27 @@
         align-items   : center;
     }
 
+    .header .dropdown-lang {
+        position: absolute;
+        top     : 15px;
+        left    : 45px;
+    }
+
+    .header .main-nav {
+        top: 20px;
+        position: relative;
+    }
+
+    .header .nav-action .nav-item.search {
+        position: absolute;
+        top     : calc(100% - 10px);
+        left    : 0;
+        right   : 0;
+    }
+
+    .header .nav-action .search__field {
+        width: auto;
+    }
 }
 
 @media (max-width: 478px) {

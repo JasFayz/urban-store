@@ -52,7 +52,7 @@
 
                     <ul class="navbar-nav ml-0 ml-sm-auto nav-action order-md-3 flex-row">
                         <li class="nav-item  search">
-                            <a class="nav-link bg-transparent search__btn" href="#" data-toggle="modal"
+                            <button class="btn nav-link bg-transparent search__btn" href="#" data-toggle="modal"
                                 data-target="#exampleModal">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -60,8 +60,8 @@
                                         d="M19.0156 18.2168L14.2555 13.2662C15.4794 11.8113 16.15 9.98069 16.15 8.07499C16.15 3.62251 12.5275 0 8.07499 0C3.62251 0 0 3.62251 0 8.07499C0 12.5275 3.62251 16.15 8.07499 16.15C9.74652 16.15 11.3394 15.6458 12.7013 14.6888L17.4975 19.677C17.6979 19.8852 17.9676 20 18.2565 20C18.53 20 18.7895 19.8957 18.9864 19.7061C19.4049 19.3034 19.4182 18.6357 19.0156 18.2168ZM8.07499 2.10652C11.3661 2.10652 14.0435 4.78391 14.0435 8.07499C14.0435 11.3661 11.3661 14.0435 8.07499 14.0435C4.78391 14.0435 2.10652 11.3661 2.10652 8.07499C2.10652 4.78391 4.78391 2.10652 8.07499 2.10652Z"
                                         fill="#6D6E71" />
                                 </svg>
-                            </a>
-                            <div class="search__field ">
+                            </button>
+                            <div class="search__field show">
                                 <input type="text">
                             </div>
                         </li>
@@ -213,6 +213,7 @@
                                 <div class="info">
                                     <div class="type">Woomes sportwear</div>
                                     <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="old-price">$80</div>
                                     <div class="price">$80</div>
                                 </div>
                             </a>
@@ -223,6 +224,7 @@
                                 <div class="info">
                                     <div class="type">Woomes sportwear</div>
                                     <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="old-price">$80</div>
                                     <div class="price">$80</div>
                                 </div>
                             </a>
@@ -233,6 +235,7 @@
                                 <div class="info">
                                     <div class="type">Woomes sportwear</div>
                                     <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="old-price">$80</div>
                                     <div class="price">$80</div>
                                 </div>
                             </a>
@@ -243,6 +246,7 @@
                                 <div class="info">
                                     <div class="type">Woomes sportwear</div>
                                     <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="old-price">$80</div>
                                     <div class="price">$80</div>
                                 </div>
                             </a>
@@ -253,6 +257,7 @@
                                 <div class="info">
                                     <div class="type">Woomes sportwear</div>
                                     <div class="title">Adidas sportwear Adidas sportwear</div>
+                                    <div class="old-price">$80</div>
                                     <div class="price">$80</div>
                                 </div>
                             </a>
@@ -502,9 +507,9 @@
     </script>
     <script>
         $(document).ready(function () {
-            $('.search__btn').click(function () {
-                $('.search__field').toggleClass('show')
-            })
+            // $('.search__btn').click(function () {
+            //     $('.search__field').toggleClass('show')
+            // })
             $('.search__field input').keyup(function () {
                 console.log('qweqwe')
                 $('.search__ui').addClass('show')
