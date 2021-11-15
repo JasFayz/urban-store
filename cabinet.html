@@ -50,7 +50,7 @@
                     </div>
 
 
-                    <ul class="navbar-nav ml-0 ml-sm-auto nav-action order-md-3 flex-row">
+                    <ul class="navbar-nav ml-sm-auto nav-action order-md-3 flex-row">
                         <li class="nav-item  search">
                             <button class="btn nav-link bg-transparent search__btn" href="#" data-toggle="modal"
                                 data-target="#exampleModal">
@@ -507,11 +507,12 @@
     </script>
     <script>
         $(document).ready(function () {
-            // $('.search__btn').click(function () {
-            //     $('.search__field').toggleClass('show')
-            // })
+            $('.search__btn').click(function () {
+                $('.search__ui').addClass('show')
+                $('.search').addClass('show')
+            })
             $('.search__field input').keyup(function () {
-                console.log('qweqwe')
+
                 $('.search__ui').addClass('show')
             })
         })
