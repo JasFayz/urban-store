@@ -61,6 +61,15 @@
                                         fill="#6D6E71" />
                                 </svg>
                             </button>
+                            <button class="btn search__btn-close">
+
+                                <svg fill="#6D6E71" height="10" width="10" viewBox="0 0 24 24">
+                                    <path
+                                        d="M15.04 12L24 2.96 21.04 0 12 8.96 3.04 0 0 2.96 9.04 12 0 20.96 3.04 24 12 14.96 21.04 24 24 20.96z">
+                                    </path>
+                                </svg>
+
+                            </button>
                             <div class="search__field show">
                                 <input type="text">
                             </div>
@@ -511,8 +520,12 @@
                 $('.search__ui').addClass('show')
                 $('.search').addClass('show')
             })
-            $('.search__field input').keyup(function () {
 
+            $('.search__btn-close').click(function () {
+                $('.search__ui').removeClass('show')
+                $('.search').removeClass('show')
+            })
+            $('.search__field input').keyup(function () {
                 $('.search__ui').addClass('show')
             })
         })
